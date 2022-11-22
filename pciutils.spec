@@ -1,6 +1,6 @@
 Name:		pciutils
 Version:	3.9.0
-Release:	2%{?dist}
+Release:	2.rv64%{?dist}
 Summary:	PCI bus related utilities
 License:	GPLv2+
 URL:		https://mj.ucw.cz/sw/pciutils/
@@ -101,6 +101,9 @@ install -p -m 644 lib/libpci.pc $RPM_BUILD_ROOT%{_libdir}/pkgconfig
 %{_mandir}/man7/*
 
 %changelog
+* Tue Nov 22 2022 David Abdurachmanov <davidlt@rivosinc.com> - 3.9.0-2.rv64
+- Add riscv64
+
 * Thu Dec 15 2022 Michal Hlavinka <mhlavink@redhat.com> - 3.9.0-2
 - fix gcc optimizing-out versioned symbols when -flto is used (gccbz#48200)
 
